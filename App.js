@@ -141,7 +141,7 @@ function StartNewGame() {
   }
 
   console.log(gameState)
-  function handleClick() {
+  function newGamState() {
     setGameState({
       gameMatrix: CreateMatrix(value),
       gameOver: false,
@@ -155,11 +155,12 @@ function StartNewGame() {
 
   return (
     <div>
-      <button id="start" className="start" onClick={handleClick}>
+      <button id="start" className="start" onClick={newGamState}>
         Start
       </button>
 
       <select className="select" id="select" onChange={handleChange}>
+        
         {optionsArray.map((option) => {
           return (
             <option key={option} value={option}>
@@ -179,7 +180,6 @@ function StartNewGame() {
           })
         })}
         <BtnEvent />
- 
       </div>
     </div>
   )
